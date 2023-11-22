@@ -17,11 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from kitchen_restaurant.views import (
-    index
+    index,
+    DishTypeView
 )
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("__debug__/", include("debug_toolbar.urls")),
-    path("", index, name="index")
+    path("", index, name="index"),
+    path("dish_types/", DishTypeView.as_view(), name="dish-types-list")
 ]
