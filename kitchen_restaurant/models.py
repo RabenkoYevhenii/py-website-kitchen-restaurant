@@ -33,10 +33,15 @@ class Dish(models.Model):
         on_delete=models.CASCADE,
         related_name="dishes"
     )
-    cooks = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="dishes")
+    cooks = models.ManyToManyField(
+        settings.AUTH_USER_MODEL,
+        related_name="dishes"
+    )
 
     class Meta:
         ordering = ["name"]
+        verbose_name = "dish"
+        verbose_name_plural = "dishes"
 
     def __str__(self):
         return self.name
