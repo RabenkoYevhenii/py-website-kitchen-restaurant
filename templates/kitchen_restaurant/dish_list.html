@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1>
+    Dish list
+  </h1>
+  {% if dish_list %}
+    <ul>
+      {% for dish in dish_list %}
+        <li>
+          <p>
+            <strong>Name:</strong> {{ dish.name }},
+            <strong>Price:</strong> {{ dish.price }}
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no dishes in kitchen</p>
+  {% endif %}
+{% endblock %}

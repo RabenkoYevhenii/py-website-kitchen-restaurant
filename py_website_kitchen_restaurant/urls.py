@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from kitchen_restaurant.views import (
     index,
-    DishTypeView
+    DishTypeListView,
+    DishListView
 )
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("__debug__/", include("debug_toolbar.urls")),
     path("", index, name="index"),
-    path("dish_types/", DishTypeView.as_view(), name="dish-types-list")
+    path("dish_types/", DishTypeListView.as_view(), name="dish-types-list"),
+    path("dish/", DishListView.as_view(), name="dishes-list")
 ]

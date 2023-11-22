@@ -20,7 +20,13 @@ def index(request):
     return render(request, "kitchen_restaurant/index.html", context=context)
 
 
-class DishTypeView(generic.ListView):
+class DishTypeListView(generic.ListView):
     model = DishType
     template_name = "kitchen_restaurant/dish_types_list.html"
     context_object_name = "dish_types_list"
+
+
+class DishListView(generic.ListView):
+    model = DishType
+    queryset = Dish.objects.all().select_related("dish_type")
+
