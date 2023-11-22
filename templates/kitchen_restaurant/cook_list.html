@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1>
+    Cook list
+  </h1>
+  {% if cook_list %}
+    <ul>
+      {% for cook in cook_list %}
+        <li>
+          <p>
+            <strong>Username:</strong> {{ cook.username }},
+            <strong>Experience:</strong> {{ cook.years_of_experience }}
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no cooks in kitchen</p>
+  {% endif %}
+{% endblock %}

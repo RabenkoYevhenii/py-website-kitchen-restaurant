@@ -19,7 +19,8 @@ from django.urls import path, include
 from kitchen_restaurant.views import (
     index,
     DishTypeListView,
-    DishListView
+    DishListView,
+    CookListView
 )
 
 urlpatterns = [
@@ -27,5 +28,6 @@ urlpatterns = [
     path("__debug__/", include("debug_toolbar.urls")),
     path("", index, name="index"),
     path("dish_types/", DishTypeListView.as_view(), name="dish-types-list"),
-    path("dish/", DishListView.as_view(), name="dishes-list")
+    path("dish/", DishListView.as_view(), name="dishes-list"),
+    path("cook/", CookListView.as_view(), name="cooks-list")
 ]
