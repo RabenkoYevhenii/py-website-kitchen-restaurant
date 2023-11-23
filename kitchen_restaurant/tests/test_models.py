@@ -11,7 +11,10 @@ class DishTypeModelTests(TestCase):
         self.assertEqual(str(self.dish_type), "Test Dish Type")
 
     def test_get_absolute_url(self):
-        url = reverse("kitchen_restaurant:dish-type-detail", kwargs={"pk": self.dish_type.pk})
+        url = reverse(
+            "kitchen_restaurant:dish-type-detail",
+            kwargs={"pk": self.dish_type.pk}
+        )
         self.assertEqual(self.dish_type.get_absolute_url(), url)
 
 
@@ -23,7 +26,10 @@ class CookModelTests(TestCase):
         self.assertEqual(str(self.cook), "John Doe")
 
     def test_get_absolute_url(self):
-        url = reverse("kitchen_restaurant:cook-detail", kwargs={"pk": self.cook.pk})
+        url = reverse(
+            "kitchen_restaurant:cook-detail",
+            kwargs={"pk": self.cook.pk}
+        )
         self.assertEqual(self.cook.get_absolute_url(), url)
 
 
@@ -43,7 +49,10 @@ class DishModelTests(TestCase):
         self.assertEqual(str(self.dish), "Test Dish")
 
     def test_get_absolute_url(self):
-        url = reverse("kitchen_restaurant:dish-detail", kwargs={"pk": self.dish.pk})
+        url = reverse(
+            "kitchen_restaurant:dish-detail",
+            kwargs={"pk": self.dish.pk}
+        )
         self.assertEqual(self.dish.get_absolute_url(), url)
 
     def test_dish_type_related_name(self):
