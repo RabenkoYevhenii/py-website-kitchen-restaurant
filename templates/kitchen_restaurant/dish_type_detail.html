@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    {{ dish_type_detail.name}}
+    <a href="{% url 'kitchen_restaurant:dish-type-update' pk=dish_type_detail.id %}" class="btn btn-secondary link-to-page">
+      Update dish type
+    </a>
+    <a href="{% url 'kitchen_restaurant:dish-type-delete' pk=dish_type_detail.id %}" class="btn btn-danger link-to-page">
+      Delete dish type
+    </a>
+  </h1>
+    {% for dish in dish_type_detail.dishes.all %}
+      <li><strong>{{ dish.name }}</strong></li>
+    {% endfor %}
+{% endblock %}
