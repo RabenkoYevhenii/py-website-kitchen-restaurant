@@ -22,18 +22,26 @@ from kitchen_restaurant.views import (
     DishListView,
     CookListView,
     DishDetailView,
+    DishTypeDetailView,
     CookDetailView,
+    DishTypeCreateView,
+    DishTypeUpdateView,
+    DishTypeDeleteView
 )
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("__debug__/", include("debug_toolbar.urls")),
     path("", index, name="index"),
-    path("dish_types/", DishTypeListView.as_view(), name="dish-types-list"),
-    path("dish/", DishListView.as_view(), name="dishes-list"),
-    path("cook/", CookListView.as_view(), name="cooks-list"),
+    path("dish_types/", DishTypeListView.as_view(), name="dish-type-list"),
+    path("dish/", DishListView.as_view(), name="dish-list"),
+    path("cook/", CookListView.as_view(), name="cook-list"),
+    path("dish_types/<int:pk>", DishTypeDetailView.as_view(), name="dish-type-detail"),
     path("dish/<int:pk>/", DishDetailView.as_view(), name="dish-detail"),
-    path("cook/<int:pk>/", CookDetailView.as_view(), name="cook-detail")
+    path("cook/<int:pk>/", CookDetailView.as_view(), name="cook-detail"),
+    path("dish_types/create", DishTypeCreateView.as_view(), name="dish-type-create"),
+    path("dish_types/<int:pk>/update", DishTypeUpdateView.as_view(), name="dish-type-update"),
+    path("dish_types/<int:pk>/delete", DishTypeDeleteView.as_view(), name="dish-type-delete")
 ]
 
 

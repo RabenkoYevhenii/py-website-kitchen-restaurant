@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views import generic
 
 from kitchen_restaurant.models import DishType, Cook, Dish
@@ -22,8 +23,34 @@ def index(request):
 
 class DishTypeListView(generic.ListView):
     model = DishType
-    template_name = "kitchen_restaurant/dish_types_list.html"
-    context_object_name = "dish_types_list"
+    template_name = "kitchen_restaurant/dish_type_list.html"
+    context_object_name = "dish_type_list"
+
+
+class DishTypeDetailView(generic.DetailView):
+    model = DishType
+    template_name = "kitchen_restaurant/dish_type_detail.html"
+    context_object_name = "dish_type_detail"
+
+
+class DishTypeCreateView(generic.CreateView):
+    model = DishType
+    fields = "__all__"
+    template_name = "kitchen_restaurant/dish_type_form.html"
+    success_url = reverse_lazy("dish-type-list")
+
+
+class DishTypeUpdateView(generic.UpdateView):
+    model = DishType
+    fields = "__all__"
+    template_name = "kitchen_restaurant/dish_type_form.html"
+    success_url = reverse_lazy("dish-type-list")
+
+
+class DishTypeDeleteView(generic.DeleteView):
+    model = DishType
+    success_url = reverse_lazy("dish-type-list")
+    template_name = "kitchen_restaurant/dish_type_confirm_delete.html"
 
 
 class DishListView(generic.ListView):
