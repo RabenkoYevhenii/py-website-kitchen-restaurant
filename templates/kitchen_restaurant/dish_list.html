@@ -4,18 +4,27 @@
 {% block content %}
   <h1>
     Dish list
+    <a href="{% url 'dish-create' %}" class="btn btn-primary link-to-page">
+      Create
+    </a>
   </h1>
   {% if dish_list %}
-    <ul>
-      {% for dish in dish_list %}
-        <li>
-          <p>
-            <strong>Name:</strong> {{ dish.name }},
-            <strong>Price:</strong> {{ dish.price }}
-          </p>
-        </li>
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+    {% for dish in dish_list %}
+        <tr>
+          <td>
+            <a href="{{ dish.get_absolute_url }}">{{ dish.name }}</a>
+          </td>
+          <td>
+            {{ dish.price }}
+          </td>
+        </tr>
       {% endfor %}
-    </ul>
+    </table>
   {% else %}
     <p>There are no dishes in kitchen</p>
   {% endif %}
