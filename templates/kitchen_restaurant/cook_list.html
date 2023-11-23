@@ -4,7 +4,7 @@
 {% block content %}
   <h1>
     Cook list
-    <a href="{% url 'cook-create' %}" class="btn btn-primary link-to-page">
+    <a href="{% url 'kitchen_restaurant:cook-create' %}" class="btn btn-primary link-to-page">
       Create
     </a>
   </h1>
@@ -23,7 +23,7 @@
           <td>
             <a href="{{ cook.get_absolute_url }}">{{ cook.username }}</a>
           </td>
-          <td>{{ cook.years_of_experience }}</td>
+          <td>{{ cook.years_of_experience }} years</td>
         </tr>
       {% endfor %}
     </table>

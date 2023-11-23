@@ -14,107 +14,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from kitchen_restaurant.views import (
-    index,
-    DishTypeListView,
-    DishListView,
-    CookListView,
-    DishDetailView,
-    DishTypeDetailView,
-    CookDetailView,
-    DishTypeCreateView,
-    DishTypeUpdateView,
-    DishTypeDeleteView,
-    DishCreateView,
-    DishUpdateView,
-    DishDeleteView,
-    CookCreateView,
-    CookUpdateView,
-    CookDeleteView,
-)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("__debug__/", include("debug_toolbar.urls")),
-    path("", index, name="index"),
     path("accounts/", include("django.contrib.auth.urls")),
-    path(
-        "dish_types/",
-        DishTypeListView.as_view(),
-        name="dish-type-list"
-    ),
-    path(
-        "dish/",
-        DishListView.as_view(),
-        name="dish-list"
-    ),
-    path(
-        "cook/",
-        CookListView.as_view(),
-        name="cook-list"
-    ),
-    path(
-        "dish_types/<int:pk>",
-        DishTypeDetailView.as_view(),
-        name="dish-type-detail"
-    ),
-    path(
-        "dish/<int:pk>/",
-        DishDetailView.as_view(),
-        name="dish-detail"
-    ),
-    path(
-        "cook/<int:pk>/",
-        CookDetailView.as_view(),
-        name="cook-detail"
-    ),
-    path(
-        "dish_types/create",
-        DishTypeCreateView.as_view(),
-        name="dish-type-create"
-    ),
-    path(
-        "dish_types/<int:pk>/update",
-        DishTypeUpdateView.as_view(),
-        name="dish-type-update"
-    ),
-    path(
-        "dish_types/<int:pk>/delete",
-        DishTypeDeleteView.as_view(),
-        name="dish-type-delete"),
-    path(
-        "dish/create",
-        DishCreateView.as_view(),
-        name="dish-create"
-    ),
-    path(
-        "dish/<int:pk>/update",
-        DishUpdateView.as_view(),
-        name="dish-update"
-    ),
-    path(
-        "dish/<int:pk>/delete",
-        DishDeleteView.as_view(),
-        name="dish-delete"
-    ),
-    path(
-        "cook/create",
-        CookCreateView.as_view(),
-        name="cook-create"
-    ),
-    path(
-        "cook/<int:pk>/update",
-        CookUpdateView.as_view(),
-        name="cook-update"
-    ),
-    path(
-        "cook/<int:pk>/delete",
-        CookDeleteView.as_view(),
-        name="cook-delete"
-    ),
-]
-
-
-app_name = "kitchen_restaurant"
+    path("", include("kitchen_restaurant.urls", namespace="kitchen_restaurant")),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

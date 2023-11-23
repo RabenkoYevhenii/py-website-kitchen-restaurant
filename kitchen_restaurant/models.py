@@ -14,7 +14,7 @@ class DishType(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("dish-type-detail", kwargs={"pk": self.pk})
+        return reverse("kitchen_restaurant:dish-type-detail", kwargs={"pk": self.pk})
 
 
 class Cook(AbstractUser):
@@ -28,7 +28,7 @@ class Cook(AbstractUser):
         return f"{self.first_name} {self.last_name}"
 
     def get_absolute_url(self):
-        return reverse("cook-detail", kwargs={"pk": self.pk})
+        return reverse("kitchen_restaurant:cook-detail", kwargs={"pk": self.pk})
 
 
 class Dish(models.Model):
@@ -54,4 +54,4 @@ class Dish(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("dish-detail", kwargs={"pk": self.pk})
+        return reverse("kitchen_restaurant:dish-detail", kwargs={"pk": self.pk})
