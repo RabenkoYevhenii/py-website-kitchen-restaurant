@@ -39,6 +39,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("__debug__/", include("debug_toolbar.urls")),
     path("", index, name="index"),
+    path("accounts/", include("django.contrib.auth.urls")),
     path(
         "dish_types/",
         DishTypeListView.as_view(),
