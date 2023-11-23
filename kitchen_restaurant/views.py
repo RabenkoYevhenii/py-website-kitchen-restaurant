@@ -30,6 +30,7 @@ class DishTypeListView(generic.ListView):
     model = DishType
     template_name = "kitchen_restaurant/dish_type_list.html"
     context_object_name = "dish_type_list"
+    paginate_by = 5
 
 
 class DishTypeDetailView(generic.DetailView):
@@ -61,6 +62,7 @@ class DishTypeDeleteView(generic.DeleteView):
 class DishListView(generic.ListView):
     model = DishType
     queryset = Dish.objects.all().select_related("dish_type")
+    paginate_by = 5
 
 
 class DishDetailView(generic.DetailView):
@@ -70,11 +72,13 @@ class DishDetailView(generic.DetailView):
 class DishCreateView(generic.CreateView):
     model = Dish
     form_class = DishForm
+    success_url = reverse_lazy("dish-list")
 
 
 class DishUpdateView(generic.UpdateView):
     model = Dish
     form_class = DishForm
+    success_url = reverse_lazy("dish-list")
 
 
 class DishDeleteView(generic.DeleteView):
@@ -84,6 +88,7 @@ class DishDeleteView(generic.DeleteView):
 
 class CookListView(generic.ListView):
     model = Cook
+    paginate_by = 5
 
 
 class CookDetailView(generic.DetailView):
@@ -94,11 +99,13 @@ class CookDetailView(generic.DetailView):
 class CookCreateView(generic.CreateView):
     model = Cook
     form_class = CookCreateForm
+    success_url = reverse_lazy("cook-list")
 
 
 class CookUpdateView(generic.UpdateView):
     model = Cook
     form_class = CookUpdateForm
+    success_url = reverse_lazy("cook-list")
 
 
 class CookDeleteView(generic.DeleteView):
