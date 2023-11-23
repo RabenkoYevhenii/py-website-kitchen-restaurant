@@ -37,3 +37,8 @@ class CookListView(generic.ListView):
 
 class DishDetailView(generic.DetailView):
     model = Dish
+
+
+class CookDetailView(generic.DetailView):
+    model = Cook
+    queryset = Cook.objects.all().prefetch_related("dishes__cooks")
