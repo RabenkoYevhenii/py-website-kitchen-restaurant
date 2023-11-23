@@ -3,6 +3,12 @@
 {% block content %}
   <h1>
     Username: {{ Cook.username }}
+    <a href="{% url 'cook-update' pk=cook.id %}" class="btn btn-secondary link-to-page">
+      Update
+    </a>
+    <a href="{% url 'cook-delete' pk=cook.id %}" class="btn btn-danger link-to-page">
+      Delete
+    </a>
   </h1>
 
   <p><strong>First name:</strong> {{ cook.first_name }}</p>
@@ -14,7 +20,6 @@
     <h4>Dishes</h4>
 
     {% for dish in cook.dishes.all %}
-        <hr>
         <li><strong>{{ dish.name }}</strong></li>
     {% empty %}
       <p>No dishes!</p>

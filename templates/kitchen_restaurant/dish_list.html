@@ -14,7 +14,7 @@
         <th>Name</th>
         <th>Price</th>
       </tr>
-    {% for dish in dish_list %}
+      {% for dish in dish_list %}
         <tr>
           <td>
             <a href="{{ dish.get_absolute_url }}">{{ dish.name }}</a>

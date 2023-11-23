@@ -4,18 +4,25 @@
 {% block content %}
   <h1>
     Cook list
+    <a href="{% url 'cook-create' %}" class="btn btn-primary link-to-page">
+      Create
+    </a>
   </h1>
   {% if cook_list %}
-    <ul>
+    <table class="table">
+      <tr>
+        <th>Username</th>
+        <th>Experience</th>
+      </tr>
       {% for cook in cook_list %}
-        <li>
-          <p>
-            <strong>Username:</strong> {{ cook.username }},
-            <strong>Experience:</strong> {{ cook.years_of_experience }}
-          </p>
-        </li>
+        <tr>
+          <td>
+            <a href="{{ cook.get_absolute_url }}">{{ cook.username }}</a>
+          </td>
+          <td>{{ cook.years_of_experience }}</td>
+        </tr>
       {% endfor %}
-    </ul>
+    </table>
   {% else %}
     <p>There are no cooks in kitchen</p>
   {% endif %}

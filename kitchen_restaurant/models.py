@@ -13,6 +13,9 @@ class DishType(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse("dish-type-detail", kwargs={"pk": self.pk})
+
 
 class Cook(AbstractUser):
     years_of_experience = models.IntegerField(default=0)
@@ -23,6 +26,9 @@ class Cook(AbstractUser):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+
+    def get_absolute_url(self):
+        return reverse("cook-detail", kwargs={"pk": self.pk})
 
 
 class Dish(models.Model):
