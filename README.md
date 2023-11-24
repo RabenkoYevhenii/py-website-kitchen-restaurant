@@ -6,7 +6,7 @@
 2) Clone repository into a desirable folder:
 
     ```
-    git clone https://github.com/mykolamateichuk/django-it-company-task-manager.git
+    git clone https://github.com/RabenkoYevhenii/py-website-kitchen-restaurant.git
     ```
 
 3) Open cloned folder in terminal
