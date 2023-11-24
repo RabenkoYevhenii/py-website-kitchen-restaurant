@@ -34,7 +34,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 DEBUG = os.environ.get("DJANGO_DEBUG", "") != False
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "kitchen-restaurant.onrender.com"]
 
 
 # Application definition
