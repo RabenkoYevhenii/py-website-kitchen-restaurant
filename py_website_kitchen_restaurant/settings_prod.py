@@ -23,13 +23,11 @@ load_dotenv(BASE_DIR / ".env")
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get(
-    "DJANGO_SECRET_KEY",
-    "django-insecure-2w=4w@(6)+!gft*(btp2c$emt8!(n&z9qab8a^u%#_&0igxsw1"
-)
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+CSRF_COOKIE_SECURE = True
+DEBUG = os.environ.get("DJANGO_DEBUG", "") != False
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 
@@ -124,6 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "kitchen_restaurant.Cook"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -150,7 +149,5 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-AUTH_USER_MODEL = "kitchen_restaurant.Cook"
 
 LOGIN_REDIRECT_URL = "/"
