@@ -1,0 +1,522 @@
+[
+  {
+    "model": "kitchen_restaurant.dishtype",
+    "pk": 1,
+    "fields": {
+      "name": "Main Course"
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dishtype",
+    "pk": 2,
+    "fields": {
+      "name": "Soup"
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dishtype",
+    "pk": 3,
+    "fields": {
+      "name": "Appetizer"
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dishtype",
+    "pk": 4,
+    "fields": {
+      "name": "Side Dish"
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dishtype",
+    "pk": 5,
+    "fields": {
+      "name": "Dessert"
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dishtype",
+    "pk": 2,
+    "fields": {
+      "name": "Soup"
+    }
+  },
+
+  {
+    "model": "kitchen_restaurant.cook",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$BUhjpAu9fhPiyQ32TwqPTZ$ilWk94guIsVyiKZR9LJ+DUU3W6uUItO5diaaVOcNaGs=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "chef1",
+      "first_name": "Artem",
+      "last_name": "Boyko",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-11-23T18:31:42.394Z",
+      "years_of_experience": 5,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen_restaurant.cook",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$7zLiMwNUHm4qqmWHhQlYmb$P6FqjZnLI7flSYP9ETzGuw9WNaoTAfpDiz+gsV3J/0M=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "chef2",
+      "first_name": "Anastasia",
+      "last_name": "Reminchenko",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-11-23T18:31:42.395Z",
+      "years_of_experience": 8,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen_restaurant.cook",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$q9hXaKfQfMGJZhZA2Tsiwc$oMVTfNi/3FhOIZNrL7WHA33oMhaiXXGbsKFfy8biRw4=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "qwerty",
+      "first_name": "Sergiy",
+      "last_name": "Lobtsev",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-11-23T08:18:27.323Z",
+      "years_of_experience": 12,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen_restaurant.cook",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$BwK6AgTkpT7ISF7ki5zPyu$eRRgSuQSxDPnWdbVdB57Vn1wG3+gpfGKr7uEk/FLhLU=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "realone",
+      "first_name": "Valeria",
+      "last_name": "Semerenko",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-11-23T08:18:57.973Z",
+      "years_of_experience": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen_restaurant.cook",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$FcHNL6eNEM3QJou3gqwCjH$/SoNOuboyRhMFBtF3OIf8AGOjo9lDeHuUxFSMLeom1k=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "hero",
+      "first_name": "Georgiy",
+      "last_name": "Panasenkov",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-11-23T08:19:31.775Z",
+      "years_of_experience": 5,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen_restaurant.cook",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$q3PnV3v8BSo7ONlM56IFId$4gOYQUgUFaHRHxLjGmnww6RZyM8/zavu5AZ51JuoETc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "well",
+      "first_name": "Lisa",
+      "last_name": "Nukinko",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-11-23T12:57:25.808Z",
+      "years_of_experience": 7,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen_restaurant.cook",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$7cai5x8stGjpVCplGY59O1$QFXHET5D2vFC1N+8/g/74M8W4iL404AKD77ERfO0vzc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "pet",
+      "first_name": "Panas",
+      "last_name": "Yurchenko",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-11-23T12:59:57.229Z",
+      "years_of_experience": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen_restaurant.cook",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$7mo1NHYMoeB5QKHXfGw2Co$oF9NtlEdPtk0tGx8N/ar1hwJ6n4xX2BGgxFQrLhgf2M=",
+      "last_login": "2023-11-23T19:04:42.278Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Bad",
+      "last_name": "Cook",
+      "email": "admin@admin.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-11-23T18:46:42.578Z",
+      "years_of_experience": 0,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 1,
+    "fields": {
+        "name": "Banosh",
+        "description": "The basis of this dish is corn grits, which are cooked on milk, cream for several hours in the oven. Roasted cracklings, bacon and salted cheese, cheese add brightness of taste. Mushroom sauce is also added if desired.",
+        "price": "12.99",
+        "dish_type": 1,
+        "cooks": [
+          1
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 2,
+    "fields": {
+        "name": "Varenyky with potatoes",
+        "description": "Dumplings filled with potatoes served with sour cream.",
+        "price": "14.99",
+        "dish_type": 1,
+        "cooks": [
+          2, 1, 5
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 3,
+    "fields": {
+        "name": "Holubtsi",
+        "description": "Cabbage rolls stuffed with rice and meat, served with tomato sauce.",
+        "price": "16.99",
+        "dish_type": 1,
+        "cooks": [
+          8, 3, 4
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 4,
+    "fields": {
+        "name": "Kotlety",
+        "description": "Ukrainian-style meat patties, made with ground pork, served with mashed potatoes.",
+        "price": "15.99",
+        "dish_type": 1,
+        "cooks":  [
+          1, 5, 4
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 5,
+    "fields": {
+        "name": "Deruny",
+        "description": "Potato pancakes, crispy on the outside and soft on the inside, served with sour cream.",
+        "price": "13.99",
+        "dish_type": 1,
+        "cooks": [
+          3, 2, 6, 1, 5, 4, 7
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 6,
+    "fields": {
+        "name": "Solianka",
+        "description": "A rich and hearty soup with a variety of meats, pickles, and a dollop of sour cream.",
+        "price": "14.99",
+        "dish_type": 2,
+        "cooks": [
+          1, 3, 5
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 7,
+    "fields": {
+        "name": "Chicken Noodle Soup",
+        "description": "Classic chicken soup with tender noodles, carrots, and celery.",
+        "price": "12.99",
+        "dish_type": 2,
+        "cooks": [
+          7, 8, 1
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 8,
+    "fields": {
+        "name": "Sorrel Soup (Shchavel Borscht)",
+        "description": "A tangy soup made with sorrel, potatoes and eggs, giving it a distinctive flavor.",
+        "price": "13.99",
+        "dish_type": 2,
+        "cooks": [
+          2, 4, 6
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 9,
+    "fields": {
+        "name": "Mushroom Soup",
+        "description": "Creamy soup made with a variety of mushrooms, onions, and herbs.",
+        "price": "15.99",
+        "dish_type": 2,
+        "cooks": [
+          5, 8
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 10,
+    "fields": {
+        "name": "Buckwheat Soup (Hrechanyk)",
+        "description": "Hearty soup with buckwheat, vegetables and meat, providing a wholesome and satisfying meal.",
+        "price": "16.99",
+        "dish_type": 2,
+        "cooks": [
+          2, 4, 1
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 11,
+    "fields": {
+        "name": "Zucchini Pancakes (Mlyntsi)",
+        "description": "Savory pancakes made with grated zucchini, herbs, and flour, served with sour cream.",
+        "price": "10.99",
+        "dish_type": 3,
+        "cooks": [
+          1, 2, 3
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 12,
+    "fields": {
+        "name": "Stuffed Peppers",
+        "description": "Bell peppers filled with a tasty combination of meat, rice, and vegetables, baked to perfection.",
+        "price": "13.99",
+        "dish_type": 3,
+        "cooks": [
+          4, 5, 6
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 13,
+    "fields": {
+        "name": "Vegetable Salad (Vinaigrette)",
+        "description": "A vibrant salad made with boiled potatoes, beets, carrots, pickles, and peas, dressed in sunflower oil.",
+        "price": "10.99",
+        "dish_type": 3,
+        "cooks": [
+          7, 8
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 14,
+    "fields": {
+        "name": "Mushroom Julienne",
+        "description": "Creamy mushroom dish baked with cheese, often served in individual portions.",
+        "price": "12.99",
+        "dish_type": 3,
+        "cooks": [
+          1, 8, 2
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 15,
+    "fields": {
+        "name": "Eggplant Caviar (Ikra)",
+        "description": "A flavorful spread made with roasted eggplants, tomatoes, and spices, perfect for spreading on bread or crackers.",
+        "price": "9.99",
+        "dish_type": 3,
+        "cooks": [
+          7, 3, 6
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 16,
+    "fields": {
+        "name": "Kartoplia Solimkoiu (Shoestring Potatoes)",
+        "description": "Crispy shoestring-cut potatoes, seasoned and fried until golden brown, served as a delightful side dish.",
+        "price": "7.99",
+        "dish_type": 4,
+        "cooks": [
+          4, 5, 1
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 17,
+    "fields": {
+        "name": "Lazy Varenyky (Lazy Dumplings)",
+        "description": "Dumplings made from cottage cheese and flour, boiled and served with sour cream or fruit preserves.",
+        "price": "10.99",
+        "dish_type": 4,
+        "cooks": [
+          2, 3, 6
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 18,
+    "fields": {
+        "name": "Mizeria (Cucumber Salad)",
+        "description": "A refreshing salad made with sliced cucumbers, sour cream, and dill, perfect as a light side dish.",
+        "price": "6.99",
+        "dish_type": 4,
+        "cooks": [
+          8, 7, 1
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 19,
+    "fields": {
+        "name": "Hrechana Kasha (Buckwheat Porridge)",
+        "description": "Nutritious buckwheat porridge cooked to perfection, a classic Ukrainian side dish.",
+        "price": "8.99",
+        "dish_type": 4,
+        "cooks": [
+          1, 2, 3, 4, 5, 6, 7, 8
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 20,
+    "fields": {
+        "name": "Riaba Babka (Cornbread)",
+        "description": "Traditional Ukrainian cornbread, baked to perfection and served as a comforting side dish.",
+        "price": "9.99",
+        "dish_type": 5,
+        "cooks": [
+          8, 7
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 21,
+    "fields": {
+        "name": "Medovik (Honey Cake)",
+        "description": "Layers of honey-infused sponge cake and creamy filling, creating a sweet and indulgent dessert.",
+        "price": "14.99",
+        "dish_type": 5,
+        "cooks": [
+          1, 2
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 22,
+    "fields": {
+        "name": "Kiev Cake",
+        "description": "A famous Ukrainian cake featuring layers of meringue and buttercream, adorned with chopped nuts.",
+        "price": "16.99",
+        "dish_type": 5,
+        "cooks": [
+          3, 4
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 23,
+    "fields": {
+        "name": "Varenyky z Vyshniamy (Cherry Dumplings)",
+        "description": "Delicious dumplings filled with sweet cherries, boiled and served with a dusting of powdered sugar.",
+        "price": "12.99",
+        "dish_type": 5,
+        "cooks": [
+          5, 6
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 24,
+    "fields": {
+        "name": "Zefir",
+        "description": "Soft and fluffy marshmallow-like dessert made with fruit puree, sugar, and egg whites.",
+        "price": "9.99",
+        "dish_type": 5,
+        "cooks": [
+          7, 8
+        ]
+    }
+  },
+  {
+    "model": "kitchen_restaurant.dish",
+    "pk": 25,
+    "fields": {
+        "name": "Pampushky (Ukrainian Doughnuts)",
+        "description": "Light and fluffy doughnuts, filled with fruit jam or dusted with powdered sugar.",
+        "price": "11.99",
+        "dish_type": 5,
+        "cooks": [
+          1, 6, 5, 8
+        ]
+    }
+  }
+]
