@@ -33,7 +33,7 @@ _Use following command to load data from database_
 
 _Use following command to run server_
 
-`python manage.py runserver --settings=py_website_kitchen_restaurant.settings_prod`
+`python manage.py runserver`
 
 ### Log in
 You can use below credentials to login:
