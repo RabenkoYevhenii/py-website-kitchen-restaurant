@@ -59,7 +59,7 @@ There is detailed information about every dish type, dishes and cooks
 ![img.png](images/home_page.png)
 
 
-![img.png](img.png)
+![dish_types.png](images%2Fdish_types.png)
 
 
 ![img_3.png](images/dish_list.png)
