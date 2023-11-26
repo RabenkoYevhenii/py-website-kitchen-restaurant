@@ -2,7 +2,7 @@
 ## How it works
 Django project for restaurant kitchen management
 
-![img_1.png](images/diagram.png)
+![diagram.png](images%2Fdiagram.png)
 
 It is a web-site for restaurants with ukrainian kitchen.
 Using this web-site, it is easy to represent your restaurant`s menu to guests.
