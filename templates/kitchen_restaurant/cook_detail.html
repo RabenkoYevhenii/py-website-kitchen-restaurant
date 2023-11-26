@@ -1,28 +1,71 @@
-{% extends "base.html" %}
+{% extends "layouts/base-presentation.html" %}
+
+{% block title %} Cook Detail: {{ cook.username }} {% endblock title %}
+
+{% block body_class %} cook-detail-page {% endblock body_class %}
 
 {% block content %}
-  <h1>
-    Username: {{ Cook.username }}
-    <a href="{% url 'kitchen_restaurant:cook-update' pk=cook.id %}" class="btn btn-secondary link-to-page">
-      Update
-    </a>
-    <a href="{% url 'kitchen_restaurant:cook-delete' pk=cook.id %}" class="btn btn-danger link-to-page">
-      Delete
-    </a>
-  </h1>
 
-  <p><strong>First name:</strong> {{ cook.first_name }}</p>
-  <p><strong>Last name:</strong> {{ cook.last_name }}</p>
-  <p><strong>Years of experience:</strong> {{ cook.years_of_experience }}</p>
-  <p><strong>Is Chief:</strong> {{ cook.is_staff }}</p>
+  <header class="header-2">
+    <div class="page-header section-height-75 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto">
+            <h1 class="text-white pt-3 mt-n5">
+              <a class="text-white" target="_blank" href="https://appseed.us/ui-kit/soft-ui-design-system">Ukrainian Kitchen Restaurant</a>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute w-100 z-index-1 bottom-0">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </header>
 
-  <div class="ml-3">
-    <h4>Dishes</h4>
+  <section class="pt-3 pb-4" id="cook-detail">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 z-index-2 border-radius-xl mt-n10 mx-auto py-3 blur shadow-blur">
+          <h1>Cook Detail: {{ cook.username }}</h1>
+          {% if user.is_staff %}
+            <a href="{% url 'kitchen_restaurant:cook-update' pk=cook.id %}" class="btn btn-secondary link-to-page">
+              Update
+            </a>
+            <a href="{% url 'kitchen_restaurant:cook-delete' pk=cook.id %}" class="btn btn-danger link-to-page">
+              Delete
+            </a>
+          {% endif %}
 
-    {% for dish in cook.dishes.all %}
-        <li><strong>{{ dish.name }}</strong></li>
-    {% empty %}
-      <p>No dishes!</p>
-    {% endfor %}
-  </div>
+          <p><strong>First name:</strong> {{ cook.first_name }}</p>
+          <p><strong>Last name:</strong> {{ cook.last_name }}</p>
+          <p><strong>Years of experience:</strong> {{ cook.years_of_experience }}</p>
+          <p><strong>Is Chief:</strong> {{ cook.is_staff }}</p>
+
+          <div class="ml-3">
+            <h4>Dishes</h4>
+
+            {% for dish in cook.dishes.all %}
+              <li><strong>{{ dish.name }}</strong></li>
+            {% empty %}
+              <p>No dishes!</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 {% endblock %}

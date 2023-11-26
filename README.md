@@ -56,14 +56,14 @@ There is detailed information about every dish type, dishes and cooks
 
 
 ## Demo
-![img.png](images/home_page.png)
+
+![home_page.png](images%2Fhome_page.png)
 
 
-![img_2.png](images/dish_types.png)
+![dish_types.png](images%2Fdish_types.png)
 
 
-![img_3.png](images/dish_list.png)
+![dish_list.png](images%2Fdish_list.png)
 
 
-![img_4.png](images/cook_page.png)
-
+![cook_page.png](images%2Fcook_page.png)
