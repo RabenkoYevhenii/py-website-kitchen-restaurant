@@ -9,7 +9,7 @@ Using this web-site, it is easy to represent your restaurant`s menu to guests.
 
 ## Check it out!
 
-[Kitchen restaurant project deployed to Render](https://kitchen-restaurant.onrender.com)
+[Kitchen restaurant project deployed to Render](https://kitchen-restaurant-customized.onrender.com/)
 
 ## Installing
 #### Python3 must be already installed
