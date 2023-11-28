@@ -17,7 +17,6 @@ from kitchen_restaurant.models import DishType, Cook, Dish
 
 @login_required
 def index(request):
-    """View function for the home page of the site."""
 
     num_dish_types = DishType.objects.count()
     num_cooks = Cook.objects.count()
